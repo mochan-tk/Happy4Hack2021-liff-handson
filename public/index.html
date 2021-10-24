@@ -8,6 +8,8 @@
     </head>
     <body>
         <div id="liffAppContent">
+            <input type="button" onClick="buttonclick()" value="button"></input>
+            <p>output : <span id="output"></span></p>
             <!-- ACTION BUTTONS -->
             <div class="buttonGroup">
                 <div class="buttonRow">
@@ -126,5 +128,13 @@
         </div>
         <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
         <script src="liff-starter.js"></script>
+        <script>
+            function buttonclick(){
+                let comment = window.prompt("LIFFブラウザでwindow.prompt()でdefaultメッセージから変更しない場合、OKを押しても値が渡りません","default message");
+               if(comment){
+                   document.getElementById("output").innerHTML = comment;
+               }
+            }
+        </script>
     </body>
 </html>
